@@ -124,6 +124,14 @@ section.animate {
 .grid-socialrow article a {
     text-decoration: none;
     color: #434649;
+    transition: text-shadow 200ms, color 100ms;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.grid-socialrow article a:hover {
+    text-shadow: 0px 0px 1px #000;
+    color: #000;
 }
 
 .grid-socialrow article a i {
