@@ -2,10 +2,6 @@ body {
     background: radial-gradient( circle, transparent 50%, black 300%), white;
 }
 
-a {
-    color: #000000;
-}
-
 p {
     margin-bottom: 0;
 }
@@ -84,16 +80,6 @@ section.animate {
 }
 
 
-
-.grid-social1,
-.grid-social2,
-.grid-social3,
-.grid-social4,
-.grid-social5 {
-    font-size: 2em;
-    text-align: center;
-}
-
 .grid-name {
     margin-left: 0.9em;
 }
@@ -108,31 +94,60 @@ section.animate {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "grid-avatar grid-name grid-name grid-name grid-name" "grid-about grid-about grid-about grid-about grid-about" "grid-social1 grid-social2 grid-social3 grid-social4 grid-social5";
+    grid-template-areas: "grid-avatar grid-name grid-name grid-name grid-name" "grid-about grid-about grid-about grid-about grid-about" "grid-socialrow grid-socialrow grid-socialrow grid-socialrow grid-socialrow";
     width: 95%;
+    height: 100%;
 }
 
 .grid-avatar {
     grid-area: grid-avatar;
 }
 
-.grid-social1 {
+.grid-socialrow {
+    padding-top: 1.25em;
+    grid-area: grid-socialrow;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "grid-social1 grid-social2 grid-social3 grid-social4 grid-social5";
+}
+
+.grid-socialrow article {
+    text-align: center;
+}
+
+.grid-socialrow article a {
+    text-decoration: none;
+    color: #434649;
+}
+
+.grid-socialrow article a i {
+    font-size: 2em;
+}
+
+.grid-socialrow article a sub {
+    padding-top: 0.2em;
+    display: block;
+    font-family: 'Open Sans';
+}
+
+.grid-socialrow article:nth-of-type(1) {
     grid-area: grid-social1;
 }
 
-.grid-social2 {
+.grid-socialrow article:nth-of-type(2) {
     grid-area: grid-social2;
 }
 
-.grid-social3 {
+.grid-socialrow article:nth-of-type(3) {
     grid-area: grid-social3;
 }
 
-.grid-social4 {
+.grid-socialrow article:nth-of-type(4) {
     grid-area: grid-social4;
 }
 
-.grid-social5 {
+.grid-socialrow article:nth-of-type(5) {
     grid-area: grid-social5;
 }
 
